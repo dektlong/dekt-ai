@@ -36,24 +36,18 @@
         <enabled>true</enabled>
       </snapshots>
     </repository>
-    <!-- Commercial Spring Extensions -->
-    <!-- 
     <repository>
       <id>tanzu-spring-repo</id>
       <url>https://artifactory.eng.vmware.com/api-auto-registration-docker-local</url>
     </repository>
-    -->
 	</repositories>
   
   <dependencies>
-    <!-- Commercial Spring Extensions -->
-    <!-- 
     <dependency>
       <groupId>com.vmware.tanzu.spring.governance</groupId>
       <artifactId>tanzu-spring-fips-starter</artifactId>
       <version>0.1.0-SNAPSHOT</version>
     </dependency>
-    -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
