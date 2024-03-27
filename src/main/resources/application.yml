@@ -4,7 +4,6 @@ spring:
       api-key: "YOUR KEY"
   jpa:
     generate-ddl: true
-
 management:
   endpoints:
     web:
@@ -14,6 +13,16 @@ management:
   endpoint:
     health:
       show-details: always
+
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-alias: demo
+    key-store: classpath:keystore.bks
+    key-store-password: changeit
+    key-password: changeit
+    key-store-type: "BCFKS"
 ---
 spring:
   config:
@@ -23,24 +32,6 @@ spring:
 server:
   http2:
     enabled: true
-#  port: 8443
-  #port: 8080
- # ssl:
-    #no compliant
-    #enabled: true
-    #key-alias: demo
-    #key-store: classpath:keystore.p12
-    #key-password: changeit
-    #key-store-type: PKCS12
-    
-    #complaint
-  #  enabled: true
-  #  key-alias: demo
-  #  key-store: classpath:keystore.bks
-  #  key-store-password: changeit
-  #  key-password: changeit
-  #  key-store-type: "BCFKS"
-
 ---
 spring:
   config:
